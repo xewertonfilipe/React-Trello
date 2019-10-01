@@ -1,30 +1,37 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 0 30px;
-  height: 100%;
+  & + div {
+    margin: 0 5px;
+  }
+
+  margin-right: 5px;
   flex: 0 0 320px;
+  background: #f4f5f7;
 
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 42px;
+    height: 66px;
+    background: #e5e7ec;
 
     h2 {
       text-transform: uppercase;
       font-weight: 500;
       font-size: 16px;
-      padding: 0 10px;
+      padding: 10px 10px;
     }
 
     button {
+      padding: 10px;
       border: 0px;
       cursor: pointer;
+      background: #e5e7ec;
     }
   }
 
   ul {
-    margin-top: 20px;
+    padding: 18px;
   }
 `;
