@@ -19,6 +19,7 @@ export default createGlobalStyle`
     background: #ffffff;
     color: #707070;
     -webkit-font-smoothing: antialiased !important;
+    padding-left:30px;
   }
 
   ul {
