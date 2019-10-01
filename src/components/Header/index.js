@@ -5,7 +5,7 @@ import { Container } from './styles';
 export default function Header() {
   return (
     <Container>
-      <h1>Título do Quadro</h1>
+      <h1>Contratar um Front-End Engineer</h1>
     </Container>
   );
 }

@@ -60,7 +60,7 @@ export default function Card({ data, index, listIndex }) {
       <header />
       <p>{data.content}</p>
       {data.user && <img src={data.user} alt="" />}
-      <span>Desenvolvimento</span>
+      <span>{data.tag}</span>
     </Container>
   );
 }
