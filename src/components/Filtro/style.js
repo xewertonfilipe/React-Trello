@@ -18,7 +18,8 @@ export const Container = styled.div`
     padding: 10px;
     margin-left: 12px;
     text-transform: uppercase;
-    background: #e5e7ec;
+    background: #f4f5f7;
+    /* background: #e5e7ec; */
     border: 0px;
     border-radius: 4px;
     color: #76899d;
