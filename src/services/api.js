@@ -1,38 +1,75 @@
 export function loadLists() {
   return [
     {
-      title: 'Coisas para fazer',
+      title: 'Tarefas',
       creatable: true,
       cards: [
         {
           id: 1,
-          content: 'Agendar as entrevistas',
-          tag: 'RH',
-          user: 'https://api.adorable.io/avatars/90/abott@adorable.png'
+          content: 'Estudar módulo 01 de NodeJS',
+          labels: ['#7159c1'],
+          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+        },
+        {
+          id: 2,
+          content:
+            'Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy',
+          labels: ['#7159c1'],
+          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+        },
+        {
+          id: 3,
+          content: 'Estudar módulo 03 de React Native',
+          labels: ['#7159c1'],
+          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+        },
+        {
+          id: 4,
+          content:
+            'Gravar Aula "NextJS: Utilizando server-side rendering com ReactJS"',
+          labels: ['#54e1f7'],
+          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+        },
+        {
+          id: 5,
+          content: 'Gravar testes e deploy ReactJS',
+          labels: ['#54e1f7'],
+          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
         }
       ]
     },
     {
-      title: 'Em andamento',
+      title: 'Fazendo',
       creatable: false,
       cards: [
         {
           id: 6,
-          content: 'Elaborar o desafio técnico',
-          tag: ['Back-End', 'Front-End'],
-          user: 'https://api.adorable.io/avatars/90/abott@adorable.png'
+          content: 'Recriando clone do Pipefy',
+          labels: [],
+          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
         }
       ]
     },
     {
-      title: 'Atrasado',
+      title: 'Pausado',
       creatable: false,
       cards: [
         {
           id: 7,
-          content: 'Gravar sobre Geolocalização e mapas com React',
-          tag: 'Desenvolvimento',
-          user: 'https://api.adorable.io/avatars/90/abott@adorable.png'
+          content: 'Gravar sobre Geolocalização e mapas com React Native',
+          labels: ['#7159c1'],
+          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+        },
+        {
+          id: 8,
+          content: 'Gravar testes e deploy ReactJS',
+          labels: ['#54e1f7'],
+          user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+        },
+        {
+          id: 9,
+          content: 'Ajustes na biblioteca unform',
+          labels: []
         }
       ]
     },
@@ -43,15 +80,19 @@ export function loadLists() {
       cards: [
         {
           id: 10,
-          content: 'Página de Login',
-          tag: 'Desenvolvimento',
-          user: 'https://api.adorable.io/avatars/90/abott@adorable.png'
+          content: 'Gravar aula sobre deploy e CI com React Native',
+          labels: []
         },
         {
           id: 12,
-          content: 'Ajustes footer home page',
-          tag: 'Desenvolvimento',
-          user: 'https://api.adorable.io/avatars/90/abott@adorable.png'
+          content: 'Gravar testes e deploy ReactJS',
+          labels: ['#54e1f7']
+        },
+        {
+          id: 13,
+          content:
+            'Gravar Aula "Internacionalização de aplicações Node.js, ReactJS e React Native"',
+          labels: ['#7159c1']
         }
       ]
     }
