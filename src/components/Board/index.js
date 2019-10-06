@@ -52,7 +52,9 @@ export default function Board() {
         <Button
           className="btn-column"
           title="Coluna"
-          onClick={() => {}}
+          onClick={() => {
+            alert("I'm sorry, next implementations...");
+          }}
           btnBig
         />
       </Container>

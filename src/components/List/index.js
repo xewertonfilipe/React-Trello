@@ -30,7 +30,14 @@ function List({ data, index: listIndex }) {
               />
             ))}
         </ul>
-        {listIndex === 0 && <Button title="Task" onClick={() => {}} />}
+        {listIndex === 0 && (
+          <Button
+            title="Task"
+            onClick={() => {
+              alert("I'm sorry, next implementations...");
+            }}
+          />
+        )}
       </div>
     </Container>
   );
