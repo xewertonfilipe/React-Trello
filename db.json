@@ -11,7 +11,38 @@
             {
               "id": 2,
               "title": "Agendar as entrevistas",
-              "tags": ["RH"]
+              "tags": ["RH"],
+              "members": [
+                {
+                  "id": 10,
+                  "name": "Alila Ferreira",
+                  "photoURL": "https://api.adorable.io/avatars/125/abott@adorable.png"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "Página de login",
+              "tags": ["Front-End"],
+              "members": [
+                {
+                  "id": 1,
+                  "name": "Pedro Filipe",
+                  "photoURL": "https://api.adorable.io/avatars/125/abott@adorable.png"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "title": "Ajuste no footer",
+              "tags": ["Front-End"],
+              "members": [
+                {
+                  "id": 1,
+                  "name": "Guiber Luiz",
+                  "photoURL": null
+                }
+              ]
             }
           ]
         },
@@ -35,13 +66,62 @@
                   "photoURL": null
                 }
               ]
+            },
+            {
+              "id": 22,
+              "title": "Agendar entrevista",
+              "tags": ["RH"],
+              "members": [
+                {
+                  "id": 1,
+                  "name": "Thaynara Rodrigues",
+                  "photoURL": null
+                }
+              ]
             }
           ]
         },
         {
           "id": 3,
           "title": "Concluído",
-          "cards": []
+          "cards": [
+            {
+              "id": 2,
+              "title": "Estruturar o banco de dados",
+              "tags": ["Back-End"],
+              "members": [
+                {
+                  "id": 16,
+                  "name": "Ítalo Soares",
+                  "photoURL": "https://api.adorable.io/avatars/125/abott@adorable.png"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "title": "Desenvolver o menu principal",
+              "tags": ["Front-End"],
+              "members": [
+                {
+                  "id": 19,
+                  "name": "Barbara",
+                  "photoURL": "https://api.adorable.io/avatars/125/abott@adorable.png"
+                }
+              ]
+            },
+            {
+              "id": 7,
+              "title": "Criar API",
+              "tags": ["Back-End"],
+              "members": [
+                {
+                  "id": 20,
+                  "name": "Thiago Henrique",
+                  "photoURL": null
+                }
+              ]
+            }
+          ]
         }
       ]
     }
