@@ -11,10 +11,10 @@ import Board from './components/Board';
 function App() {
   return (
     <DndProvider backend={HTML5Backend}>
+      <GlobalStyle />
       <Header />
       <Filtro />
       <Board />
-      <GlobalStyle />
     </DndProvider>
   );
 }

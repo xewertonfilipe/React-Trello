@@ -5,6 +5,29 @@ import BoardContext from '../Board/context';
 
 import { Container } from './style';
 
+const Member = ({ name, num }) => {
+  console.log(num);
+  const nameArr = name.split(' ');
+  const firstNameLastName = `${nameArr[0].charAt(0)} ${nameArr[1].charAt(0)}`;
+  return (
+    <div
+      style={{
+        width: 30,
+        height: 30,
+        borderRadius: '50%',
+        fontSize: 12,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: '#3a94f9',
+        color: '#fff'
+      }}
+    >
+      {firstNameLastName}
+    </div>
+  );
+};
+
 export default function Card({ data, index, listIndex }) {
   const ref = useRef();
   const { move } = useContext(BoardContext);
@@ -58,9 +81,37 @@ export default function Card({ data, index, listIndex }) {
   return (
     <Container ref={ref} isDragging={isDragging}>
       <header />
-      <p>{data.content}</p>
-      {data.user && <img src={data.user} alt="" />}
-      <span>{data.tag}</span>
+      <p>{data.title}</p>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}
+      >
+        <div>
+          {!!data.tags &&
+            data.tags.map((tag, index) => <span key={index}>{tag}</span>)}
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center'
+          }}
+        >
+          {!!data.members
+            ? data.members.map(member => {
+                if (member.photoURL) {
+                  return <img key={member.id} src={data.user} alt="" />;
+                }
+                return (
+                  <Member key={member.id} num={member.id} name={member.name} />
+                );
+              })
+            : null}
+        </div>
+      </div>
     </Container>
   );
 }
