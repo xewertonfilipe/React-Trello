@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import produce from 'immer';
 
 import boardsService from '../../services/boardsService';
-import { loadLists } from '../../services/api';
 
 import BoardContext from './context';
 
@@ -12,10 +11,7 @@ import { Container } from './style';
 
 import Button from '../Button';
 
-// const data = loadLists();
-
 export default function Board() {
-  const [boardTitle, setboardTitle] = useState();
   const [lists, setLists] = useState([]);
 
   useEffect(() => {
@@ -24,9 +20,7 @@ export default function Board() {
         .getBoards()
         .then(({ data }) => {
           const columns = data[0].columns;
-          const title = data[0].title;
           setLists(columns);
-          setboardTitle(title);
         })
         .catch(erro => console.log(erro));
     };
@@ -53,7 +47,7 @@ export default function Board() {
         <Button
           className="btn-column"
           title="Coluna"
-          onClick={() => alert(2)}
+          onClick={() => {}}
           btnBig
         />
       </Container>

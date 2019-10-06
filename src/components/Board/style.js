@@ -5,6 +5,7 @@ export const Container = styled.div`
   padding-top: 30px;
   height: 100%;
   .btn-column {
+    width: 22%;
     align-self: baseline;
   }
 `;

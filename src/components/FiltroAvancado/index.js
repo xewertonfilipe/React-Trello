@@ -1,10 +1,6 @@
 import React from 'react';
 
-import { loadLists } from '../../services/api';
-
 import { Container } from './style';
-
-const data = loadLists();
 
 export default function FiltroAvancado() {
   return (
