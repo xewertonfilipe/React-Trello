@@ -5,6 +5,12 @@ export const Container = styled.div`
     margin: 0 5px;
   }
 
+  .content-list {
+    padding: 18px;
+    overflow-y: auto;
+    max-height: 90%;
+  }
+
   margin-right: 5px;
   flex: 0 0 320px;
   background: #f4f5f7;
@@ -29,9 +35,5 @@ export const Container = styled.div`
       cursor: pointer;
       background: #e5e7ec;
     }
-  }
-
-  ul {
-    padding: 18px;
   }
 `;
