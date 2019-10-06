@@ -5,26 +5,10 @@ import BoardContext from '../Board/context';
 
 import * as S from './style';
 
-const Member = ({ name, num }) => {
+const Member = ({ name }) => {
   const nameArr = name.split(' ');
   const firstNameLastName = `${nameArr[0].charAt(0)} ${nameArr[1].charAt(0)}`;
-  return (
-    <div
-      style={{
-        width: 30,
-        height: 30,
-        borderRadius: '50%',
-        fontSize: 12,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: '#3a94f9',
-        color: '#fff'
-      }}
-    >
-      {firstNameLastName}
-    </div>
-  );
+  return <S.StyleName>{firstNameLastName}</S.StyleName>;
 };
 
 export default function Card({ data, index, listIndex }) {
@@ -81,36 +65,24 @@ export default function Card({ data, index, listIndex }) {
     <S.Container ref={ref} isDragging={isDragging}>
       <header />
       <p>{data.title}</p>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center'
-        }}
-      >
+      <S.StyleTag>
         <div>
           {!!data.tags &&
             data.tags.map((tag, index) => <span key={index}>{tag}</span>)}
         </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center'
-          }}
-        >
+        <S.StyleDivName>
           {!!data.members
             ? data.members.map(member => {
                 if (member.photoURL) {
-                  return <img key={member.id} src={data.user} alt="" />;
+                  return <img key={member.id} src={member.photoURL} alt="" />;
                 }
                 return (
                   <Member key={member.id} num={member.id} name={member.name} />
                 );
               })
             : null}
-        </div>
-      </div>
+        </S.StyleDivName>
+      </S.StyleTag>
     </S.Container>
   );
 }

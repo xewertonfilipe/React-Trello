@@ -61,11 +61,18 @@ export const Label = styled.span`
   background: ${props => props.color};
 `;
 
+export const StyleDivName = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 export const StyleName = styled.div`
-  width: 30;
-  height: 30;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
   border-radius: 50%;
-  font-size: 12;
+  font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,14 +80,8 @@ export const StyleName = styled.div`
   color: #fff;
 `;
 
-// export const StyleName = styled.div`
-//   width: 30,
-//   height: 30,
-//   borderRadius: '50%',
-//   fontSize: 12,
-//   display: 'flex',
-//   justifyContent: 'center',
-//   alignItems: 'center',
-//   background: '#3a94f9',
-//   color: '#fff'
-// `;
+export const StyleTag = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;

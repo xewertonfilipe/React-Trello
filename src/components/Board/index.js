@@ -3,6 +3,9 @@ import produce from 'immer';
 
 import boardsService from '../../services/boardsService';
 
+import Header from '../Header';
+import Filtro from '../Filtro';
+
 import BoardContext from './context';
 
 import List from '../List';
@@ -39,6 +42,8 @@ export default function Board() {
   }
   return (
     <BoardContext.Provider value={{ lists, move }}>
+      <Header />
+      <Filtro />
       <Container>
         {!!lists.length &&
           lists.map((list, index) => (
@@ -47,7 +52,9 @@ export default function Board() {
         <Button
           className="btn-column"
           title="Coluna"
-          onClick={() => {}}
+          onClick={() => {
+            alert("I'm sorry, next implementations...");
+          }}
           btnBig
         />
       </Container>
