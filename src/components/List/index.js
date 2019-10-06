@@ -9,7 +9,6 @@ import Button from '../Button';
 import { Container } from './style';
 
 function List({ data, index: listIndex }) {
-  console.log(data);
   return (
     <Container>
       <header>
@@ -31,7 +30,7 @@ function List({ data, index: listIndex }) {
               />
             ))}
         </ul>
-        {listIndex === 0 && <Button title="Task" onClick={() => alert(1)} />}
+        {listIndex === 0 && <Button title="Task" onClick={() => {}} />}
       </div>
     </Container>
   );

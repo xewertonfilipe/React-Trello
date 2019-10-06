@@ -25,6 +25,7 @@ export const Container = styled.div`
     margin-top: 1px;
     font-size: 10px;
     padding: 5px;
+    margin-right: 5px;
     background: #f5f5f5;
   }
 
@@ -32,6 +33,7 @@ export const Container = styled.div`
     float: right;
     width: 24px;
     height: 24px;
+    margin-right: 5px;
     border-radius: 100px;
   }
 
@@ -58,3 +60,27 @@ export const Label = styled.span`
   display: inline-block;
   background: ${props => props.color};
 `;
+
+export const StyleName = styled.div`
+  width: 30;
+  height: 30;
+  border-radius: 50%;
+  font-size: 12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3a94f9;
+  color: #fff;
+`;
+
+// export const StyleName = styled.div`
+//   width: 30,
+//   height: 30,
+//   borderRadius: '50%',
+//   fontSize: 12,
+//   display: 'flex',
+//   justifyContent: 'center',
+//   alignItems: 'center',
+//   background: '#3a94f9',
+//   color: '#fff'
+// `;

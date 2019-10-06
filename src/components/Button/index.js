@@ -4,12 +4,6 @@ import { FaPlus } from 'react-icons/fa';
 
 import * as S from './style';
 
-// btn com borda dashed
-// icone de +
-// name btn
-// ação de click
-// btnBig
-
 function Button({ title, onClick, btnBig, ...rest }) {
   return (
     <S.Button onClick={onClick} type="button" {...rest} btnBig={btnBig}>

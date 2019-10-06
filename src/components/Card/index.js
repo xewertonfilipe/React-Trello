@@ -3,10 +3,9 @@ import { useDrag, useDrop } from 'react-dnd';
 
 import BoardContext from '../Board/context';
 
-import { Container } from './style';
+import * as S from './style';
 
 const Member = ({ name, num }) => {
-  console.log(num);
   const nameArr = name.split(' ');
   const firstNameLastName = `${nameArr[0].charAt(0)} ${nameArr[1].charAt(0)}`;
   return (
@@ -79,7 +78,7 @@ export default function Card({ data, index, listIndex }) {
   dragRef(dropRef(ref));
 
   return (
-    <Container ref={ref} isDragging={isDragging}>
+    <S.Container ref={ref} isDragging={isDragging}>
       <header />
       <p>{data.title}</p>
       <div
@@ -112,6 +111,6 @@ export default function Card({ data, index, listIndex }) {
             : null}
         </div>
       </div>
-    </Container>
+    </S.Container>
   );
 }
