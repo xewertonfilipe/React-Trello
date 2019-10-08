@@ -25,6 +25,7 @@ export const Container = styled.div`
     margin-top: 1px;
     font-size: 10px;
     padding: 5px;
+    margin-right: 5px;
     background: #f5f5f5;
   }
 
@@ -32,6 +33,7 @@ export const Container = styled.div`
     float: right;
     width: 24px;
     height: 24px;
+    margin-right: 5px;
     border-radius: 100px;
   }
 
@@ -57,4 +59,29 @@ export const Container = styled.div`
 export const Label = styled.span`
   display: inline-block;
   background: ${props => props.color};
+`;
+
+export const StyleDivName = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const StyleName = styled.div`
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3a94f9;
+  color: #fff;
+`;
+
+export const StyleTag = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;

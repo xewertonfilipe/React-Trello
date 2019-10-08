@@ -3,7 +3,13 @@ import { useDrag, useDrop } from 'react-dnd';
 
 import BoardContext from '../Board/context';
 
-import { Container } from './style';
+import * as S from './style';
+
+const Member = ({ name }) => {
+  const nameArr = name.split(' ');
+  const firstNameLastName = `${nameArr[0].charAt(0)} ${nameArr[1].charAt(0)}`;
+  return <S.StyleName>{firstNameLastName}</S.StyleName>;
+};
 
 export default function Card({ data, index, listIndex }) {
   const ref = useRef();
@@ -56,11 +62,27 @@ export default function Card({ data, index, listIndex }) {
   dragRef(dropRef(ref));
 
   return (
-    <Container ref={ref} isDragging={isDragging}>
+    <S.Container ref={ref} isDragging={isDragging}>
       <header />
-      <p>{data.content}</p>
-      {data.user && <img src={data.user} alt="" />}
-      <span>{data.tag}</span>
-    </Container>
+      <p>{data.title}</p>
+      <S.StyleTag>
+        <div>
+          {!!data.tags &&
+            data.tags.map((tag, index) => <span key={index}>{tag}</span>)}
+        </div>
+        <S.StyleDivName>
+          {!!data.members
+            ? data.members.map(member => {
+                if (member.photoURL) {
+                  return <img key={member.id} src={member.photoURL} alt="" />;
+                }
+                return (
+                  <Member key={member.id} num={member.id} name={member.name} />
+                );
+              })
+            : null}
+        </S.StyleDivName>
+      </S.StyleTag>
+    </S.Container>
   );
 }
